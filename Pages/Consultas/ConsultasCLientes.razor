@@ -1,0 +1,54 @@
+﻿@page "/ConsultasLientes"
+@inject ClientesBLL ClientesBLL
+
+<div class= "card">
+
+     <div class="card-header ">
+            <h1 class="card-title">Consulta de Clientes</h1>
+     </div>
+
+    <div class="card-body">
+        <table class="table">
+    <thead>
+         <tr>
+               <th>ClienteId</th>
+               <th>Nombres</th>
+               <th>Celular</th>
+               <th>Telefono</th>
+               <th>Rnc</th>
+               <th>Email</th>
+               <th>Direccion</th>
+               <th></th>
+         </tr>
+    </thead>
+     <tbody>
+          @foreach (var cliente in lista)
+         { 
+             <tr>
+                  <td>@cliente.ClienteId</td> 
+                  <td>@cliente.Nombres</td> 
+                  <td>@cliente.Celular</td> 
+                  <td>@cliente.Telefono</td> 
+                  <td>@cliente.Rnc</td> 
+                  <td>@cliente.Email</td> 
+                  <td>@cliente.Direccion</td>
+                  <td><a href="RegistroCLientes/@cliente.ClienteId">Ver</a></td>
+             </tr>
+         }
+     </tbody>
+</table>
+
+     </div>
+
+</div>
+@code{
+    List<clientes> lista = new List<clientes>();
+
+     protected override void OnInitialized()
+    {
+        lista = ClientesBLL.GetList(c => true);
+    }
+
+}
+
+

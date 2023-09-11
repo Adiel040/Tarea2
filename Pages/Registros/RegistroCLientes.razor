@@ -1,0 +1,163 @@
+﻿@page "/RegistroCLientes"
+@page "/RegistroCLientes/{ClienteId:int}"
+@inject ClientesBLL clientesBLL
+
+
+
+<EditForm Model="cliente" OnValidSubmit="Guardar">
+    
+
+     <div class= "card">
+     
+         <div class="card-header ">
+                <h1 class="card-title">Registro de Clientes</h1>
+         </div>
+     
+        <div class="card-body">
+            <div class="row">
+                <div class="col-3">
+                <label for="txtId"class="form-label">Cliente ID:</label>
+                <input type="number"  id="txtId" class="form-control" @bind-value="cliente.ClienteId">
+            </div>
+
+             <div class="col-3 d-flex align-items-end">
+                     <button name="btnBuscar" id="btnBuscar" class="btn btn-primary col-2"  type="button" @onclick="Buscar">
+                        <span class="oi oi-magnifying-glass"></span> 
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-6">
+
+                    <label for="txtNombres"class="form-label">Nombres:</label>
+                    <input type="text" id="txtNombres" class="form-control" @bind-value="cliente.Nombres">
+                    <ValidationMessage For="@(() => cliente.Nombres)" />
+                
+                </div>
+                <div class="col-6">
+
+                    <label for="txtTelefono"class="form-label">Telefono:</label>
+                    <input type="number"  id="txtTelefono" class="form-control" @bind-value="cliente.Telefono">
+                    <ValidationMessage For="@(() => cliente.Telefono)" />
+                
+                </div>
+             </div>
+
+             <div class="row">
+
+                <div class="col-6">
+
+                    <label for="txtCelular"class="form-label">Celular:</label>
+                    <input type="number" id="txtCelular" class="form-control" @bind-value="cliente.Celular">
+                    <ValidationMessage For="@(() => cliente.Celular)" />
+                
+                </div>
+                <div class="col-6">
+
+                    <label for="txtRnc"class="form-label">Rnc:</label>
+                    <input type="text"  id="txtRnc" class="form-control" @bind-value="cliente.Rnc">
+                    <ValidationMessage For="@(() => cliente.Rnc)" />
+                
+                </div>
+             </div>
+
+             <div class="row">
+
+                <div class="col-6">
+
+                    <label for="txtEmail"class="form-label">Email:</label>
+                    <input type="mail" id="txtEmail" class="form-control" @bind-value="cliente.Email">
+                    <ValidationMessage For="@(() => cliente.Email)" />
+                
+                </div>
+                <div class="col-6">
+
+                    <label for="txtDireccion"class="form-label">Direccion:</label>
+                    <input type="text"  id="txtDireccion" class="form-control" @bind-value="cliente.Direccion">
+                    <ValidationMessage For="@(() => cliente.Direccion)" />
+                
+                </div>
+             </div>
+            
+         </div>
+     
+        <div class="card-footer">
+             <button name="btNuevo" id="btNuevo" class="btn btn-primary mr-2" @onclick="Nuevo" type="button">
+            <span class="oi oi-plus"></span> Nuevo
+            </button>
+
+            <button name="btnGuardar" id="btnGuardar" class="btn btn-success mr-2" type="submit">
+            <span class=" oi oi-cloud-download"></span> Guardar
+            </button>
+
+            <button name="btnEliminar"  id="btnEliminar" class="btn btn-danger"  @onclick="Eliminar" type="button">
+            <span class="oi oi-trash"></span> Eliminar
+            </button>
+         </div>
+     
+     </div>
+      <DataAnnotationsValidator/>
+     <ValidationSummary/>
+</EditForm>
+
+@code{
+    [Parameter]
+    public int ClienteId { get; set; }
+    public clientes cliente { get; set; } =new clientes();
+
+    protected override void OnInitialized()
+    {
+        if(ClienteId>0){
+            cliente.ClienteId= ClienteId;
+            Buscar();
+
+        }
+    }
+
+    void Guardar(){
+
+            if(!Validar()){ return;}
+
+            if( clientesBLL.Guardar(this.cliente)){Nuevo();}
+
+        }
+    void Nuevo(){
+
+        this.cliente= new clientes();
+    }
+    void Buscar(){
+        var clienteEncontrada = clientesBLL.Buscar(cliente.ClienteId);
+        if(clienteEncontrada!=null){
+            this.cliente=clienteEncontrada;
+            Console.WriteLine("econtrado");
+        }
+        else{
+            Console.WriteLine("no econtrado");
+        }
+       
+    }
+    bool Validar(){
+        /*if(cliente.Telefono!=10){return false;}
+        if(cliente.Celular !=10){return false;}
+        if(cliente?.Rnc?.Length !=9){return false;}
+        */
+        if(clientesBLL.GetList(c=> c.Nombres == cliente.Nombres).Count()>0 && clientesBLL.Existe(cliente.ClienteId) ==false){return false;}
+        if(clientesBLL.GetList(c=> c.Rnc == cliente.Rnc).Count()>0 && clientesBLL.Existe(cliente.ClienteId) ==false){return false;}
+
+        return true;
+    }
+
+    void Eliminar(){
+        if(clientesBLL.Existe(cliente.ClienteId)){
+
+            clientesBLL.Eliminar(cliente);
+                Nuevo();
+           
+            }
+        
+    }
+
+
+}
