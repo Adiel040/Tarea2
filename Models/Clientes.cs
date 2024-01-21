@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+//modelo de clientes
 public class clientes
 {
     [Key]

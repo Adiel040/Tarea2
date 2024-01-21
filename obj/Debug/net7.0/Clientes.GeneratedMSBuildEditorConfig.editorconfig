@@ -9,49 +9,49 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Clientes
 build_property.RootNamespace = Clientes
-build_property.ProjectDir = C:\Users\adiel\OneDrive\Documentos\GitHub\Tarea2\
+build_property.ProjectDir = c:\Users\adiel\OneDrive\Documentos\GitHub\Tarea2\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\adiel\OneDrive\Documentos\GitHub\Tarea2
+build_property.MSBuildProjectDirectory = c:\Users\adiel\OneDrive\Documentos\GitHub\Tarea2
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/App.razor]
+[c:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Pages/Consultas/ConsultasCLientes.razor]
+[c:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Pages/Consultas/ConsultasCLientes.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENvbnN1bHRhc0NMaWVudGVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Pages/Index.razor]
+[c:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Pages/Registros/RegistroCLientes.razor]
+[c:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Pages/Registros/RegistroCLientes.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9zXFJlZ2lzdHJvQ0xpZW50ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Shared/SurveyPrompt.razor]
+[c:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/_Imports.razor]
+[c:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Shared/MainLayout.razor]
+[c:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-a5x2v28isq
 
-[C:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Shared/NavMenu.razor]
+[c:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-xi5ps8z4qj
 
-[C:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Pages/Error.cshtml]
+[c:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Pages/_Host.cshtml]
+[c:/Users/adiel/OneDrive/Documentos/GitHub/Tarea2/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

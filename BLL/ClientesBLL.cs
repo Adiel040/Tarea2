@@ -1,7 +1,7 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 
- public class ClientesBLL
+ public class ClientesBLL //esta es la bll
 {
     private Contexto _Contexto;
 
